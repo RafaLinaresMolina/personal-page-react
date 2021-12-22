@@ -1,0 +1,64 @@
+.infoCard {
+  border-radius: 0.7em;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  height: auto;
+  align-items: center;
+  margin-left: 1em;
+  margin-right: 1.5em;
+  padding: 2em;
+  margin-bottom: 1em;
+
+  h3 {
+    color: whitesmoke;
+    font-weight: 800;
+    font-size: 1.8em;
+    text-decoration: underline;
+  }
+
+  .imageOnCard {
+    border-radius: 0.7em;
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    height: auto;
+    align-items: center;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-bottom: 1em;
+
+    img {
+      display: flex;
+      height: 19em;
+      border-radius: 50%;
+      border: 6px outset #1c6ea4;
+      justify-content: center;
+    }
+  }
+
+  .cardText {
+    justify-items: center;
+    background-color: rgba(49, 49, 49, 0.8);
+    border-radius: 0.7em;
+    padding: 2em;
+    text-shadow: -0.1em 0 black, 0 0.1em black, 0.1em 0 black, 0 -0.1em black;
+    width: 100%;
+  }
+}
+.bg1 {
+  background-image: url("../../img/pixels.jpg");
+  background-size: cover;
+}
+
+.bg2 {
+  background-image: url("../../img/bg2.jpg");
+  background-size: cover;
+}
+
+a {
+  color: whitesmoke;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+}

@@ -1,38 +1,75 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  cursor: default;
+  background-color: rgb(32, 32, 32);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+@media only screen and (max-width: 1120px) {
+  .infoCard {
+    display: flex;
+    flex-flow: column;
+  }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  .cardText{
+    width: 95%;
+    margin-left: 0em;
+  }
+
+  .imageOnCard{
+    margin-left: 0em;
+  }
+
+  .infoCard img {
+    margin-bottom: 2em;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (max-width: 800px) {
+  .parentDir{
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+
+  .openFiles{
+    margin-left: 3.2em;
+  }
+
+  .infoCard{
+    margin-left: 0em;
+    padding-left: 0em;
+  }
+
+  .cardText{
+    margin-left: 2em;
+    width: 88%;
+  }
+
+  .imageOnCard{
+    margin-left: 2em;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+
+  .infoCard{
+    margin-left: 0em;
+    padding: 0em;
+  }
+
+  .cardText{
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    margin-bottom: 0.5em;
+    width: 80%;
+  }
+
+  .imageOnCard{
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+  }
+
+  .infoCard img {
+    height: 10em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
   }
 }

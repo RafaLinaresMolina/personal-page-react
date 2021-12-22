@@ -1,0 +1,8 @@
+.sidebar {
+  display: flex;
+  flex-flow: row;
+  position: fixed;
+  height: 100%;
+  z-index: 2;
+  user-select: none;
+}
