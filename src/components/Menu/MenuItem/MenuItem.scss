@@ -1,0 +1,29 @@
+.top {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+
+  .menuItem {
+    font-size: 1.5em;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 0.5em;
+    cursor: pointer;
+
+    a {
+      padding-top: 0.2em;
+      padding-bottom: 0.2em;
+      color: rgb(105, 104, 104);
+    }
+  
+    &:hover a {
+      color: whitesmoke;
+    }
+  }
+  
+  .menuItemActive a {
+    width: 100%;
+    color: whitesmoke;
+    border-left: 0.15em solid;
+  }
+}

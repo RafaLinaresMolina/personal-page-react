@@ -26,12 +26,14 @@ const asideItems: Array<DefaultItem> = [
     icon: <LinkedinFilled />,
     active: false,
     text: "Find me on LinkedIn",
+    url: "https://www.linkedin.com/in/rafa-linares-molina/"
   },
   {
     id: "github",
     icon: <BranchesOutlined />,
     active: false,
     text: "Watch a bit of code",
+    url: "https://github.com/RafaLinaresMolina"
   },
 ];
 
