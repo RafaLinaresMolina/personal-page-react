@@ -118,49 +118,42 @@ const pages: PageType[] = [
                 <li>Scrum Master</li>
                 <li>Team Lead</li>
               </ul>
-              
+
               <h4 className="subTitle">The tecnologies used:</h4>
-              
+
+              <ul>
+                <li>Backend:</li>
                 <ul>
-                  <li>
-                    Backend:
-                  </li>
-                  <ul>
-                    <li>Node + express + typescript for the API Rest side</li>
-                    <li>PostgreSQL (with sequelize for persistance)</li>
-                    <li>MongoDb</li>
-                    <li>Jest as testing library</li>
-                    <li>Redis (as cache and socket adapter)</li>
-                  </ul>
-                  <li>
-                    Frontend:
-                  </li>
-                  <ul>
-                    <li>
-                      React + typescript + Redux on the frontend of the app
-                    </li>
-                    <li>Jest as testing library</li>
-                  </ul>
-                
+                  <li>Node + express + typescript for the API Rest side</li>
+                  <li>PostgreSQL (with sequelize for persistance)</li>
+                  <li>MongoDb</li>
+                  <li>Jest as testing library</li>
+                  <li>Redis (as cache and socket adapter)</li>
+                </ul>
+                <li>Frontend:</li>
+                <ul>
+                  <li>React + typescript + Redux on the frontend of the app</li>
+                  <li>Jest as testing library</li>
+                </ul>
               </ul>
-              
+
               <h4 className="subTitle">Other tools:</h4>
-                  <ul>
-                    <li>OBS</li>
-                    <li>Twitch</li>
-                    <li>
-                      Figma (in colaboration with the product and design team to
-                      create the wireframes for the frontend)
-                    </li>
-                    <li>clickUp as agile board</li>
-                  </ul>
-                  <h4 className="subTitle">How we work:</h4>
-                  <ul>
-                    <li>
-                      All the teams work mostly with Scrumm, with few exceptions
-                      that need kanban workflow.
-                    </li>
-                  </ul>
+              <ul>
+                <li>OBS</li>
+                <li>Twitch</li>
+                <li>
+                  Figma (in colaboration with the product and design team to
+                  create the wireframes for the frontend)
+                </li>
+                <li>clickUp as agile board</li>
+              </ul>
+              <h4 className="subTitle">How we work:</h4>
+              <ul>
+                <li>
+                  All the teams work mostly with Scrumm, with few exceptions
+                  that need kanban workflow.
+                </li>
+              </ul>
             </>
           ),
         },
@@ -457,26 +450,25 @@ const pages: PageType[] = [
           title: "Contact Info!",
           text: "Here you can find me, contact me through:",
           list: (
-            <ul>
-              <li>
-                <a
-                  href="https://www.linkedin.com/in/rafa-linares-molina/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <LinkedinFilled /> Linkedin
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://github.com/RafaLinaresMolina"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <GithubFilled /> Github
-                </a>
-              </li>
-            </ul>
+            <div className="buttons">
+              <a
+                className="outsideButton"
+                href="https://www.linkedin.com/in/rafa-linares-molina/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <LinkedinFilled /> Linkedin
+              </a>
+
+              <a
+                className="outsideButton"
+                href="https://github.com/RafaLinaresMolina"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <GithubFilled /> Github
+              </a>
+            </div>
           ),
         },
       },
