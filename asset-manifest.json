@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/personal-page-react/static/css/main.03ff563a.css",
+    "main.js": "/personal-page-react/static/js/main.f362473d.js",
+    "static/js/787.0897d19b.chunk.js": "/personal-page-react/static/js/787.0897d19b.chunk.js",
+    "static/media/pixels.jpg": "/personal-page-react/static/media/pixels.cddef3e96c1ff96c5924.jpg",
+    "static/media/bg2.jpg": "/personal-page-react/static/media/bg2.a67513d5e36f558b04d4.jpg",
+    "static/media/myself3.jpg": "/personal-page-react/static/media/myself3.26d20d4b1060f3cc11c4.jpg",
+    "static/media/myself.jpg": "/personal-page-react/static/media/myself.101043f0530382267e33.jpg",
+    "static/media/streamion.png": "/personal-page-react/static/media/streamion.8e4439090215ce3d18a8.png",
+    "static/media/geek.jpg": "/personal-page-react/static/media/geek.6b15888dbae62dec2ab2.jpg",
+    "static/media/mytra.png": "/personal-page-react/static/media/mytra.ab480d9ac30a836d16e4.png",
+    "static/media/demium.png": "/personal-page-react/static/media/demium.16e0625ddc2f4141b782.png",
+    "static/media/srg.jpg": "/personal-page-react/static/media/srg.6aafa14c27982770bf23.jpg",
+    "static/media/gnommo.jpg": "/personal-page-react/static/media/gnommo.f9c0c788eb2eb39b0ee3.jpg",
+    "index.html": "/personal-page-react/index.html",
+    "main.03ff563a.css.map": "/personal-page-react/static/css/main.03ff563a.css.map",
+    "main.f362473d.js.map": "/personal-page-react/static/js/main.f362473d.js.map",
+    "787.0897d19b.chunk.js.map": "/personal-page-react/static/js/787.0897d19b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.03ff563a.css",
+    "static/js/main.f362473d.js"
+  ]
+}
