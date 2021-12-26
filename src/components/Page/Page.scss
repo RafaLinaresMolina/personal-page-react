@@ -2,12 +2,18 @@
   margin-left: 1em;
   margin-top: 2em;
   overflow-y: scroll;
-  scrollbar-color: rgb(53, 53, 53) rgb(32, 32, 32);
   scrollbar-width: thin;
   margin-bottom: 1.6em;
+  display: flex;
+  flex-direction: column;
 
-  .entryTitle{
-      font-weight: 700;
+  .file {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .entryTitle {
+    font-weight: 700;
     color: lightgray;
     font-family: Arial, Helvetica, sans-serif;
     border-bottom: 1px outset whitesmoke;

@@ -1,0 +1,49 @@
+@media only screen and (max-width: 1120px) {
+  .infoCard {
+    display: flex;
+    flex-flow: column;
+  }
+
+  .cardText{
+    width: 95%;
+    margin-left: 0em;
+  }
+
+  .imageOnCard{
+    margin-left: 0em;
+  }
+
+  .infoCard img {
+    margin-bottom: 2em;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .parentDir{
+    display: none;
+  }
+
+  .openFiles{
+    padding-left: 3.2em;
+  }
+
+
+  .infoCard{
+    margin-left: 0em;
+    padding-left: 0em;
+  }
+
+  .cardText{
+    margin-left: 2em;
+    width: 88%;
+  }
+
+  .imageOnCard{
+    margin-left: 2em;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+
+  
+}

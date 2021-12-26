@@ -1,22 +1,19 @@
-import {ReactNode} from 'react';
-import MenuItem from './MenuItem/MenuItem';
-import { DefaultItem } from './types';
-import "./Menu.scss"
+import { ReactNode } from "react";
+import MenuItem from "./MenuItem/MenuItem";
+import { DefaultItem } from "./types";
+import "./Menu.scss";
 
 interface MenuProps {
-    children?: ReactNode | undefined;
-    menuItem: DefaultItem[]
+  children?: ReactNode | undefined;
+  menuItem: DefaultItem[];
 }
- 
-const Menu: React.FunctionComponent<MenuProps> = ({menuItem}) => {
-    return ( 
-        <div className="menu">
-            <div className="top">
-                <MenuItem menuItem={menuItem}/>
-            </div>
-        </div>
 
-     );
-}
- 
+const Menu: React.FunctionComponent<MenuProps> = ({ menuItem }) => {
+  return (
+    <div className="menu">
+      <MenuItem menuItem={menuItem} />
+    </div>
+  );
+};
+
 export default Menu;

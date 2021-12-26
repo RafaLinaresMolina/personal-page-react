@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import { PayloadPages } from "../../redux/types/pages";
 
 export type QuoteType = {
     __typename: "Quote"
@@ -20,7 +21,7 @@ export type EntryType = {
 export type Content = QuoteType | EntryType;
 
 export type PageType = {
-    id: string;
+    id: keyof PayloadPages;
     title: string;
     content: Content[];  
 }

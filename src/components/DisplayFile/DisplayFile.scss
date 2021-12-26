@@ -2,7 +2,9 @@
   display: flex;
   flex-flow: column;
   width: 100%;
+  padding-left: 18em;
   background-color: rgb(32, 32, 32);
+  scrollbar-color: rgb(53, 53, 53) rgb(32, 32, 32);
 
   .tabs {
     display: flex;
@@ -31,12 +33,5 @@
   .pageActive {
     background-color: rgb(32, 32, 32);
     color: white;
-  }
-  .files {
-    margin-left: 1em;
-    margin-top: 2em;
-    overflow-y: scroll;
-    scrollbar-color: rgb(53, 53, 53) rgb(32, 32, 32);
-    scrollbar-width: thin;
   }
 }

@@ -1,5 +1,5 @@
 import { FunctionComponent } from "react";
-import { DefaultItem } from "../../components/Menu/types";
+import { DefaultItem, DefaultPages } from "../../components/Menu/types";
 import {
   BranchesOutlined,
   FileMarkdownFilled,
@@ -12,6 +12,10 @@ import Menu from "../../components/Menu/Menu";
 import DirTree from "../../components/DirTree/DirTree";
 import DisplayFile from "../../components/DisplayFile/DisplayFile";
 import Footer from "../../components/Footer/Footer";
+import { PayloadPages } from "../../redux/types/pages";
+import { setActivePage } from "../../redux/actions/pages";
+import { useDispatch } from "react-redux";
+import "./mediaQueries.scss";
 
 const markdownIcon = <FileMarkdownFilled className="itemFileIcon" />;
 
@@ -31,20 +35,48 @@ const asideItems: Array<DefaultItem> = [
   },
 ];
 
-const fileTreeItems: Array<DefaultItem> = [
+const fileTreeItems: Array<DefaultPages> = [
   { id: "home", icon: markdownIcon, active: true, text: "home.md" },
-  { id: "cv", icon: markdownIcon, active: false, text: "curriculum.md" },
+  {
+    id: "curriculum",
+    icon: markdownIcon,
+    active: false,
+    text: "curriculum.md",
+  },
   { id: "contact", icon: markdownIcon, active: false, text: "contact.md" },
 ];
 
 const IdeLayout: FunctionComponent = () => {
+  const dispatch = useDispatch();
+
+  const changePage = async (id: keyof PayloadPages) => {
+    const newPageState = setActivePage(id);
+    await dispatch(newPageState);
+  };
+
+  const checkIfTabIsActive = (
+    pageState: PayloadPages,
+    tabId: keyof PayloadPages
+  ) => {
+    return pageState[tabId];
+  };
+
   return (
+    
     <div className="ideGlobal">
       <Sidebar>
         <Menu menuItem={asideItems}></Menu>
-        <DirTree fileTreeItems={fileTreeItems}></DirTree>
-        <DisplayFile fileTabs={fileTreeItems} />
+        <DirTree
+          fileTreeItems={fileTreeItems}
+          changePage={changePage}
+          checkIfTabIsActive={checkIfTabIsActive}
+        ></DirTree>
       </Sidebar>
+      <DisplayFile
+        fileTabs={fileTreeItems}
+        changePage={changePage}
+        checkIfTabIsActive={checkIfTabIsActive}
+      />
       <Footer />
     </div>
   );

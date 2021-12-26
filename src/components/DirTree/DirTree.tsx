@@ -1,13 +1,22 @@
 import { DownOutlined, FolderOpenFilled } from "@ant-design/icons";
 import { FunctionComponent } from "react";
-import { DefaultItem } from "../Menu/types";
+import { useTypedSelector } from "../../redux/hook";
+import { PayloadPages } from "../../redux/types/pages";
+import { DefaultPages } from "../Menu/types";
 import "./DirTree.scss";
 
 interface DirTreeProps {
-  fileTreeItems: DefaultItem[];
+  fileTreeItems: DefaultPages[];
+  changePage: (id: keyof PayloadPages) => Promise<void>;
+  checkIfTabIsActive: (
+    pageState: PayloadPages,
+    tabId: keyof PayloadPages
+  ) => boolean;
 }
 
-const DirTree: FunctionComponent<DirTreeProps> = ({ fileTreeItems }) => {
+const DirTree: FunctionComponent<DirTreeProps> = ({ fileTreeItems, changePage, checkIfTabIsActive }) => {
+  const pageState = useTypedSelector((state) => state);
+
   return (
     <div className="parentDir">
       <span className="dirTitle">
@@ -15,13 +24,21 @@ const DirTree: FunctionComponent<DirTreeProps> = ({ fileTreeItems }) => {
       </span>
       <div className="documentsTree">
         <span>
-          <DownOutlined /> <span className="itemFolderIcon"><FolderOpenFilled/></span> project
+          <DownOutlined />{" "}
+          <span className="itemFolderIcon">
+            <FolderOpenFilled />
+          </span>{" "}
+          project
         </span>
 
         <div className="childDir">
           {fileTreeItems.map((item) => (
-            <div key={item.id}
-              className={`item treeLine ${item.active ? "treeLineActive" : ""}`}
+            <div
+              key={item.id}
+              onClick={() => changePage(item.id)}
+              className={`item treeLine ${
+                checkIfTabIsActive(pageState, item.id) ? "treeLineActive" : ""
+              }`}
             >
               <div>
                 {item.icon} {item.text}

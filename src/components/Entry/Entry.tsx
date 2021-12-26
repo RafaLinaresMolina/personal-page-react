@@ -8,7 +8,7 @@ interface EntryProps {
 
 const Entry: FunctionComponent<EntryProps> = ({ entry }) => {
   return (
-    <div className="infoCard bg1">
+    <div className="infoCard bg2">
       <div className="imageOnCard">
           {entry.picture}
       </div>
