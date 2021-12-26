@@ -19,6 +19,8 @@ import demium from "../../img/logos/demium.png";
 import streamion from "../../img/logos/streamion.png";
 import { PayloadPages } from "../../redux/types/pages";
 import { useTypedSelector } from "../../redux/hook";
+import { Collapse } from "antd";
+const { Panel } = Collapse;
 
 interface DisplayFileProps {
   fileTabs: DefaultPages[];
@@ -83,106 +85,195 @@ const pages: PageType[] = [
     content: [
       {
         __typename: "Quote",
-        quote: "Behind every successful man there’s a lot of unsuccessful years.",
+        quote:
+          "Behind every successful man there’s a lot of unsuccessful years.",
         author: "Bob Brown",
       },
       {
         __typename: "Entry",
-        picture: <img src={streamion} alt="Streamion" style={{height: "256px", width: "256px"}} />,
+        picture: (
+          <img
+            src={streamion}
+            alt="Streamion"
+            style={{ height: "256px", width: "256px" }}
+          />
+        ),
         text: {
           title: "Streamion",
           url: "https://www.streamion.io/",
           text: "Still on the startup enviroment, I was hired on this wonderful work environment full of profesionals",
-          list: (<>
-            <ul>
-              <li>Streamion is an adServer for livestreaming channels and video on demand platforms.</li>
-              <li>My role is <b>Senior fullstack developer</b ></li>
-              <li>I am responsable of:</li>
+          list: (
+            <>
               <ul>
-                <li>Scrum Master</li>
-                <li>Senior developer on the backend side, using tecnologies as:</li>
-                <ul>
-                  <li>Node + express + typescript for the API Rest side</li>
-                  <li>PostgreSQL (with sequelize for persistance)</li>
-                  <li>MongoDb</li>
-                  <li>Jest as testing library</li>
-                  <li>Redis (as cache and socket adapter)</li>
-                </ul>
-                <li>Senior developer on the front side, using tecnologies as:</li>
-                <ul>
-                  <li>React + typescript + Redux on the frontend of the app</li>
-                  <li>Jest as testing library</li>
-                </ul>
-                <li>Other tools</li>
-                <ul>
-                  <li>OBS</li>
-                  <li>Twitch</li>
-                  <li>Figma (in colaboration with the product and design team to create the wireframes for the frontend)</li>
-                  <li>clickUp as agile board</li>
-                </ul>
-                <li>How we work</li>
-                <ul>
-                  <li>All the teams work mostly with Scrumm, with few exceptions that need kanban workflow.</li>
-                </ul>
+                <li>
+                  Streamion is an adServer for livestreaming channels and video
+                  on demand platforms.
+                </li>
               </ul>
-            </ul>
+              <h4 className="subTitle">My roles:</h4>
+              <ul>
+                <li>
+                  <b>Senior fullstack developer</b>
+                </li>
+                <li>Scrum Master</li>
+                <li>Team Lead</li>
+              </ul>
+              
+              <h4 className="subTitle">The tecnologies used:</h4>
+              
+                <ul>
+                  <li>
+                    Backend:
+                  </li>
+                  <ul>
+                    <li>Node + express + typescript for the API Rest side</li>
+                    <li>PostgreSQL (with sequelize for persistance)</li>
+                    <li>MongoDb</li>
+                    <li>Jest as testing library</li>
+                    <li>Redis (as cache and socket adapter)</li>
+                  </ul>
+                  <li>
+                    Frontend:
+                  </li>
+                  <ul>
+                    <li>
+                      React + typescript + Redux on the frontend of the app
+                    </li>
+                    <li>Jest as testing library</li>
+                  </ul>
+                
+              </ul>
+              
+              <h4 className="subTitle">Other tools:</h4>
+                  <ul>
+                    <li>OBS</li>
+                    <li>Twitch</li>
+                    <li>
+                      Figma (in colaboration with the product and design team to
+                      create the wireframes for the frontend)
+                    </li>
+                    <li>clickUp as agile board</li>
+                  </ul>
+                  <h4 className="subTitle">How we work:</h4>
+                  <ul>
+                    <li>
+                      All the teams work mostly with Scrumm, with few exceptions
+                      that need kanban workflow.
+                    </li>
+                  </ul>
             </>
           ),
         },
       },
       {
         __typename: "Quote",
-        quote: "Talent wins games, but teamwork and intelligence win championships.",
+        quote:
+          "Talent wins games, but teamwork and intelligence win championships.",
         author: "Michael Jordan",
       },
       {
         __typename: "Entry",
-        picture: <img src={demium} alt="Demium Valencia" style={{height: "256px", width: "256px"}} />,
+        picture: (
+          <img
+            src={demium}
+            alt="Demium Valencia"
+            style={{ height: "256px", width: "256px" }}
+          />
+        ),
         text: {
           title: "Demium Valencia",
           url: "https://demium.com/locations/valencia/es/",
           text: "Tried the entrepreneur way, and I can say:",
-          list: (<>
-            <ul>
-              <li>Discovered a passionate enviroment full of other entrepreneurs with the guts to start something big from scratch</li>
-              <li>A team wonderfuls mentors that helped on all the steps of my startup. </li>
-              <li>This experience gave me the basis of what I needed to create a business from zero. </li>
-              <li>A bit of info of the project:</li>
+          list: (
+            <>
               <ul>
-                <li>Me and other 2 partners tried to create a platform to improve the real state tools, because in spain it is a market with a technological deficit.</li>
-                <li>My role was CTO</li>
-                <li>The initial approach was, in aim to improve the dossiers generated for the real state companies, offer extra valuable info to the data already known</li>
-                <li>Me and the team develop an MVP in <b>only two months!</b></li>
-                <li>So, after add the basic info of a place, they received:</li>
-                <ul>
-                  <li>How was the nearby neighborhood, how much pharmacies or schools where in the zone</li>
-                  <li>Info about the population of the zone: average income, how the buildings were distributed</li>
-                  <li>Rentability of the purchase</li>
-                </ul>
+                <li>
+                  I discovered a passionate enviroment full of other
+                  entrepreneurs with the guts to start something big from
+                  scratch
+                </li>
+                <li>
+                  A team wonderfuls mentors that helped on all the steps of my
+                  startup.{" "}
+                </li>
+                <li>
+                  This experience gave me the basis of what I needed to create a
+                  business from zero to <b>scrum master</b>.
+                </li>
+                <br />
+                <Collapse className="collapsable">
+                  <Panel
+                    className="collapsableInnerPannel"
+                    header="A bit of info of the project done in demium"
+                    key="1"
+                  >
+                    <ul>
+                      <li>
+                        Me and other 2 partners tried to create a platform to
+                        improve the real state tools, because in spain it is a
+                        market with a technological deficit.
+                      </li>
+                      <li>My role was CTO</li>
+                      <li>
+                        The initial approach was, in aim to improve the dossiers
+                        generated for the real state companies, offer extra
+                        valuable info to the data already known
+                      </li>
+                      <li>
+                        Me and the team develop an MVP in{" "}
+                        <b>only two months!</b>
+                      </li>
+                      <li>
+                        So, after add the basic info of a place, they received:
+                      </li>
+                      <ul>
+                        <li>
+                          How was the nearby neighborhood, how much pharmacies
+                          or schools where in the zone
+                        </li>
+                        <li>
+                          Info about the population of the zone: average income,
+                          how the buildings were distributed
+                        </li>
+                        <li>Rentability of the purchase</li>
+                      </ul>
+                    </ul>
+                  </Panel>
+                </Collapse>
 
-                <li>The tecnologies used so far:</li>
-                <li>Google coud to allocate the machines</li>
-                <li>Persistance and services:</li>
+                <br />
+                <h4 className="subTitle">The tecnologies used so far:</h4>
+                <li>Frontend: </li>
                 <ul>
-                  <li>NOSQL Database (MongoDB): Used to save the data entered by the user and the generated data from them. </li>
-                  <li>PostgreSQL: Used to save and clean the cadastre data </li>
-                  <li>Microservices to calculate the estra value on the dossier </li>
+                  <li>React with typescript and Redux</li>
+                  <li>
+                    Builded a reactive fomr that changed depending on the filled
+                    options{" "}
+                  </li>
+                  <li>
+                    The ability of generate PDFs, both in spanish and english
+                  </li>
                 </ul>
                 <li>Backend: </li>
                 <ul>
                   <li>Node & express with Typescript</li>
-                  <li>sequelize and mongoose to communicate with persistent data</li>
+                  <li>
+                    sequelize and mongoose to communicate with persistent data
+                  </li>
                 </ul>
-                <li>Frontend: </li>
+                <li>Persistance and services:</li>
                 <ul>
-                  <li>React with typescript and Redux</li>
-                  <li>Builded a reactive fomr that changed depending on the filled options </li>
-                  <li>The ability of generate PDFs, both in spanish and english</li>
+                  <li>
+                    NOSQL Database (MongoDB): Used to save the data entered by
+                    the user and the generated data from them.{" "}
+                  </li>
+                  <li>PostgreSQL: Used to save and clean the cadastre data </li>
+                  <li>
+                    Microservices to calculate the estra value on the dossier{" "}
+                  </li>
                 </ul>
                 <li>Agile / Scrum with my partners</li>
               </ul>
-            </ul>
-            Sadly, (as the majority of the startups) the startup did not growth, but the experience obtained from the experience is priceless and I would definitely repeat it
             </>
           ),
         },
@@ -234,7 +325,7 @@ const pages: PageType[] = [
       },
       {
         __typename: "Entry",
-        picture: <img src={mytra} alt="Mytra Control S.L"/>,
+        picture: <img src={mytra} alt="Mytra Control S.L" />,
         text: {
           title: "Mytra Control S.L.",
           url: "https://www.mytra.es/",
@@ -264,7 +355,13 @@ const pages: PageType[] = [
       },
       {
         __typename: "Entry",
-        picture: <img src={srg} alt="SRG Global Lliria" style={{height: "256px", width: "256px"}} />,
+        picture: (
+          <img
+            src={srg}
+            alt="SRG Global Lliria"
+            style={{ height: "256px", width: "256px" }}
+          />
+        ),
         text: {
           title: "SRG Global Lliria",
           url: "https://www.srgglobal.com/",
@@ -272,20 +369,21 @@ const pages: PageType[] = [
           list: (
             <>
               <ul>
-              <li>Learned how to really do SCRUM</li>
-              <li>The importance of the well use of Git and Gitflow</li>
-              <li>Improved my skills with Microsoft SQL Server</li>
-              <li>worked with delphi on legacy code</li>
-            </ul>
-            And this experience helped myself to improve myself as a profesial
-            and to not be scared of legacy code.
+                <li>Learned how to really do SCRUM</li>
+                <li>The importance of the well use of Git and Gitflow</li>
+                <li>Improved my skills with Microsoft SQL Server</li>
+                <li>worked with delphi on legacy code</li>
+              </ul>
+              And this experience helped myself to improve myself as a profesial
+              and to not be scared of legacy code.
             </>
           ),
         },
       },
       {
         __typename: "Quote",
-        quote: "Any fool can write code that a computer can understand. Good programmers write code that humans can understand.",
+        quote:
+          "Any fool can write code that a computer can understand. Good programmers write code that humans can understand.",
         author: "Martin Fowler",
       },
       {
@@ -298,17 +396,17 @@ const pages: PageType[] = [
           list: (
             <>
               <ul>
-              <li>How to work with SCRUM</li>
-              <li>
-                The importance of the correct communication with my team
-              </li>
-              <li>Improved my skills with Oracle SQL Server</li>
-              <li>
-                The needing of test the code for avoiding future errors and
-                have more control of the workflow
-              </li>
-              <li>Worked with C on batch scripts</li>
-            </ul>
+                <li>How to work with SCRUM</li>
+                <li>
+                  The importance of the correct communication with my team
+                </li>
+                <li>Improved my skills with Oracle SQL Server</li>
+                <li>
+                  The needing of test the code for avoiding future errors and
+                  have more control of the workflow
+                </li>
+                <li>Worked with C on batch scripts</li>
+              </ul>
             </>
           ),
         },
@@ -328,15 +426,15 @@ const pages: PageType[] = [
           list: (
             <>
               <ul>
-              <li>I learned how to give presentations for clients</li>
-              <li>
-                Improved my knowledge of android studio and android apps
-              </li>
-              <li>Improved my skills with MySQL Server</li>
-              <li>The importance of a well organized schedule work</li>
-              <li>start knowing nodejs and Angular</li>
-            </ul>
-            And I have a very good memories from the Gnommostudios team.
+                <li>I learned how to give presentations for clients</li>
+                <li>
+                  Improved my knowledge of android studio and android apps
+                </li>
+                <li>Improved my skills with MySQL Server</li>
+                <li>The importance of a well organized schedule work</li>
+                <li>start knowing nodejs and Angular</li>
+              </ul>
+              And I have a very good memories from the Gnommostudios team.
             </>
           ),
         },

@@ -44,6 +44,39 @@
     padding: 2em;
     text-shadow: -0.1em 0 black, 0 0.1em black, 0.1em 0 black, 0 -0.1em black;
     width: 100%;
+
+    .ant-collapse {
+      background: rgb(0, 0, 0, 0.4);
+      border-radius: 2em;
+    }
+    .collapsable {
+      border: 0;
+      color: whitesmoke;
+
+      .ant-collapse-header {
+        color: whitesmoke;
+        background: transparent;
+      }
+
+      .collapsableInnerPannel {
+        .ant-collapse-content {
+          background-color: transparent;
+          border-top: 1px solid whitesmoke;
+        }
+        .ant-collapse-content-active {
+          background-color: transparent;
+        }
+        border: 0;
+        color: whitesmoke;
+
+        border-radius: 2em;
+        .ant-collapse-content-box {
+          color: whitesmoke;
+          background: transparent;
+          border-radius: 0em 0em 2em 2em;
+        }
+      }
+    }
   }
 }
 .bg1 {
