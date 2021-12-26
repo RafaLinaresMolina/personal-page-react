@@ -145,12 +145,14 @@ const pages: PageType[] = [
           list: (<>
             <ul>
               <li>Discovered a passionate enviroment full of other entrepreneurs with the guts to start something big from scratch</li>
-              <li>A team wonderfuls mentors that helped on all the steps of my startap. </li>
+              <li>A team wonderfuls mentors that helped on all the steps of my startup. </li>
+              <li>This experience gave me the basis of what I needed to create a business from zero. </li>
               <li>A bit of info of the project:</li>
               <ul>
                 <li>Me and other 2 partners tried to create a platform to improve the real state tools, because in spain it is a market with a technological deficit.</li>
                 <li>My role was CTO</li>
                 <li>The initial approach was, in aim to improve the dossiers generated for the real state companies, offer extra valuable info to the data already known</li>
+                <li>Me and the team develop an MVP in <b>only two months!</b></li>
                 <li>So, after add the basic info of a place, they received:</li>
                 <ul>
                   <li>How was the nearby neighborhood, how much pharmacies or schools where in the zone</li>
