@@ -14,7 +14,6 @@ const Menu: React.FunctionComponent<MenuProps> = ({ menuItem }) => {
         <div key={`menuItem_${item.id}`} className={`menuItem ${item.active ? "menuItemActive" : ""}`}>
           <a className="icon" href={item?.url} target="_blank" rel="noreferrer">
             {item.icon}
-            {console.log(item.url)}
           </a>
         </div>
       ))}
